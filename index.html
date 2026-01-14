@@ -20,7 +20,6 @@
         color: #f8fafc;
         margin: 0;
         overflow-x: hidden;
-        /* Subtle grid background */
         background-image: 
           linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
           linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
@@ -38,13 +37,11 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      /* Custom scrollbar */
       ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: var(--bg); }
       ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #333; }
       
-      /* Simple loading state */
       #root:empty::before {
         content: "Initializing System...";
         position: fixed;
@@ -58,11 +55,6 @@
         text-transform: uppercase;
       }
     </style>
-    <!-- 
-      The "useRef" error occurs when multiple versions of React are loaded.
-      By explicitly marking react and react-dom as external for react-router-dom,
-      we force it to use the exact same React instance defined in our importmap.
-    -->
     <script type="importmap">
 {
   "imports": {
@@ -70,7 +62,7 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
-    "react-router-dom": "https://esm.sh/react-router-dom@7.1.5?external=react,react-dom",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.5?deps=react@19.0.0,react-dom@19.0.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/"
   }
@@ -79,7 +71,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- esm.sh/run is a zero-config way to run TSX directly in the browser -->
     <script type="module" src="https://esm.sh/run"></script>
     <script type="module" src="./index.tsx"></script>
   </body>
