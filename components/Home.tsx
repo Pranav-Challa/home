@@ -8,9 +8,6 @@ const Home: React.FC = () => {
       {/* Hero */}
       <section className="min-h-[50vh] flex flex-col justify-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
         <div className="space-y-10">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
-            <span className="text-[10px] font-bold tracking-[0.3em] text-blue-400 uppercase">Applicant · Pure Maths & CS</span>
-          </div>
           
           <h1 className="text-7xl md:text-9xl font-bold tracking-tight leading-[0.9]">
             Logic <span className="math-font italic text-gray-500">&</span><br />
