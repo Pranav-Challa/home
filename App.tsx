@@ -23,10 +23,10 @@ const App: React.FC = () => {
         <footer className="py-20 px-6 border-t border-white/5 bg-black/20">
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">
-              © {new Date().getFullYear()} — Mathematics & Computational Science
+              © {new Date().getFullYear()} — Pranav Challa
             </div>
             <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500">
-              <a href="mailto:hello@example.com" className="hover:text-blue-400 transition-colors">Email</a>
+              <a href="mailto:pranav.moony.challa@gmail.com" className="hover:text-blue-400 transition-colors">Email</a>
               <a href="#" className="hover:text-blue-400 transition-colors">LinkedIn</a>
               <a href="#" className="hover:text-blue-400 transition-colors">GitHub</a>
             </div>
