@@ -55,6 +55,10 @@
         text-transform: uppercase;
       }
     </style>
+    <!-- 
+      Strict importmap to prevent "Multiple versions of React" error.
+      All React components must point to the exact same version (19.0.0).
+    -->
     <script type="importmap">
 {
   "imports": {
@@ -62,7 +66,7 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
-    "react-router-dom": "https://esm.sh/react-router-dom@7.1.5?deps=react@19.0.0,react-dom@19.0.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.5?external=react,react-dom",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/"
   }
@@ -71,6 +75,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- esm.sh/run is used to process TSX files directly in the browser -->
     <script type="module" src="https://esm.sh/run"></script>
     <script type="module" src="./index.tsx"></script>
   </body>
