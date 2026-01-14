@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/astroportfolio---modern-personal-site/',
+    base: '/home/',
 
     server: {
       port: 3000,
